@@ -558,7 +558,7 @@ void (*SDL_Quit_dylibloader_wrapper_SDL2)(void);
 int initialize_SDL2(int verbose) {
   void *handle;
   char *error;
-  handle = dlopen("libSDL2-2.0.so", RTLD_LAZY);
+  handle = dlopen("libSDL2-2.0.so.0", RTLD_LAZY);
   if (!handle) {
     if (verbose) {
       fprintf(stderr, "%s\n", dlerror());
