@@ -10,11 +10,11 @@ thirdparty_obj = []
 thirdparty_sources = []
 
 if env["platform"] in ["linuxbsd", "macos", "android"]:
-    thirdparty_sources = ["process.cpp", "process_unix.cpp"]
+    thirdparty_sources = ["tiny_process_lib/process.cpp", "tiny_process_lib/process_unix.cpp"]
 elif env["platform"] == "windows":
-    thirdparty_sources = ["process.cpp", "process_win.cpp"]
+    thirdparty_sources = ["tiny_process_lib/process.cpp", "tiny_process_lib/process_win.cpp"]
 
-thirdparty_dir = "process/tiny_process_lib/"
+thirdparty_dir = "thirdparty/"
 thirdparty_sources = [thirdparty_dir + file for file in thirdparty_sources]
 
 env_hbnative.Prepend(CPPPATH=[thirdparty_dir])

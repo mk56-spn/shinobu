@@ -44,7 +44,7 @@ String ProcessWindows::_quote_command_line_argument(const String &p_text) {
 Ref<Process> ProcessWindows::create_windows(const String &p_path, const Vector<String> &p_arguments, const String &p_working_dir, bool p_open_stdin) {
 	Vector<String> final_arguments;
 	for (int i = 0; i < p_arguments.size(); i++) {
-		final_arguments.push_back(_quote_command_line_argument(p_arguments[i]));
+		final_arguments.push_back(p_arguments[i]);
 	}
 	return memnew(ProcessTinyProcessLibrary(p_path, final_arguments, p_working_dir, p_open_stdin));
 }
