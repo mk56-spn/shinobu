@@ -12,7 +12,6 @@
 #include "ph_audio_stream_preview.h"
 #include "ph_blur_controls.h"
 #include "ph_singleton.h"
-#include "replay.h"
 
 #include "process/process.h"
 #include "process/process_tiny_process_lib.h"
@@ -76,11 +75,6 @@ void initialize_hbnative_module(ModuleInitializationLevel p_level) {
 	GDREGISTER_ABSTRACT_CLASS(PHNative);
 	GDREGISTER_CLASS(MultiSpinBox);
 	GDREGISTER_CLASS(HBIntervalTree);
-	GDREGISTER_ABSTRACT_CLASS(HBReplayStateSnapshot);
-	GDREGISTER_ABSTRACT_CLASS(HBReplayReader);
-	GDREGISTER_ABSTRACT_CLASS(HBReplay);
-	GDREGISTER_CLASS(HBReplayWriter);
-	GDREGISTER_CLASS(HBReplayEvent);
 	GDREGISTER_CLASS(DIVABoneDB);
 	GDREGISTER_CLASS(DIVASkeleton);
 	GDREGISTER_CLASS(DIVAObjectSet);
