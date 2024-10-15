@@ -3,6 +3,7 @@
 #include "register_types.h"
 
 #include "core/config/engine.h"
+#include "core/object/class_db.h"
 #include "diva/bone_db.h"
 #include "diva/diva_object.h"
 #include "interval_tree.h"
@@ -22,6 +23,7 @@
 #include "process/process_windows.h"
 #endif
 
+#include "rectpack/rectpack.h"
 #include "threen.h"
 
 static PHAudioStreamPreviewGenerator *preview_generator_ptr = NULL;
@@ -78,6 +80,7 @@ void initialize_hbnative_module(ModuleInitializationLevel p_level) {
 	GDREGISTER_CLASS(DIVABoneDB);
 	GDREGISTER_CLASS(DIVASkeleton);
 	GDREGISTER_CLASS(DIVAObjectSet);
+	GDREGISTER_ABSTRACT_CLASS(HBRectPack);
 	Engine::get_singleton()->add_singleton(Engine::Singleton("PHAudioStreamPreviewGenerator", PHAudioStreamPreviewGenerator::get_singleton()));
 	Engine::get_singleton()->add_singleton(Engine::Singleton("PHNative", PHNative::get_singleton()));
 }
